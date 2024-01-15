@@ -2,6 +2,7 @@
 use Illuminate\Http;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,5 @@ Route::post('/my-display',function(Request $req) {
     $data['myinputnumber'] = $req->input('myinputnumber');
     return view('mydisplay', $data);
 });
+
+Route::get('/admin', [AdminController::class, 'index']);
