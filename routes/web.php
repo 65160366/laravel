@@ -15,6 +15,18 @@ use App\Http\Controllers\C_titles;
 |
 */
 
+
+Rotue::get('/login',[MyAuth::class, 'login_view']);
+Rotue::get('/register',[MyAuth::class, 'register_view']);
+Rotue::get('/logout',[MyAuth::class, 'logout_process']);
+Rotue::post('/login',[MyAuth::class, 'login_process']);
+Rotue::post('/register',[MyAuth::class, 'register_process']);
+
+Route::resource('titles', C_titles::class)->middleware('auth');
+Route::middleware('auth')->group(function(){
+     // auth first
+});
+
 Route::get('/', function () {
     // return view('welcome');
     return 'hi';
