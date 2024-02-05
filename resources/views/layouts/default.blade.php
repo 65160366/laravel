@@ -55,12 +55,6 @@
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
-                                {{-- logout --}}
-      <li class="nav-item bg-danger">
-        <a class="nav-link" data-slide="true" href="{{url('/logout')}}" role="button">
-          logout
-        </a>
-      </li>
                             </div>
                         </form>
                     </div>
@@ -164,6 +158,12 @@
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"
                         role="button">
                         <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+                {{-- logout --}}
+                <li class="nav-item bg-danger">
+                    <a class="nav-link" data-slide="true" href="{{ url('/logout') }}" role="button">
+                        logout
                     </a>
                 </li>
             </ul>
