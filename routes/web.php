@@ -43,6 +43,10 @@ Route::get('/', function () {
     return view('welcome'); // welcome.blade.php
 });
 
+Route::get('/homework', function () {
+    return view('hw'); // hw.blade.php
+});
+
 // use Illuminate\Http\Request;
 
 Route::get('/my-route', function(){
